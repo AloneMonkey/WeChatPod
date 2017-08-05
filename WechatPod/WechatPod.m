@@ -27,4 +27,8 @@
     [pluginConfig setEnableRevoke:enableRevoke];
 }
 
+-(void)setGameNumber:(NSInteger)gameNumber{
+    [pluginConfig setGameNumber:gameNumber];
+}
+
 @end

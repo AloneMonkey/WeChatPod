@@ -6,6 +6,11 @@
 //  Copyright © 2017年 Coder. All rights reserved.
 //
 
+/**
+     1. 消息防撤回
+     2. 游戏作弊
+ */
+
 #import "CaptainHook.h"
 #import "WeChatHeader.h"
 #import "WeChatServiceManager.h"
@@ -45,7 +50,24 @@ CHOptimizedMethod1(self, void, CMessageMgr, onRevokeMsg,CMessageWrap*, msgWrap){
     [[WeChatServiceManager sharedCMessageMgr] AddLocalMsg:msgWrap.m_nsFromUsr MsgWrap:newMsgWrap];
 }
 
+CHOptimizedMethod2(self, void, CMessageMgr, AddEmoticonMsg, NSString*, msg, MsgWrap, CMessageWrap*, msgWrap){
+    
+    //1   猜拳   2  骰子  0  自定义表情
+    if([msgWrap m_uiMessageType] == 47 && ([msgWrap m_uiGameType] == 2|| [msgWrap m_uiGameType] == 1)){
+        
+        if(([msgWrap m_uiGameType] == 1 && pluginConfig.gameNumber <= 3) || ([msgWrap m_uiGameType] == 2 && pluginConfig.gameNumber >=4 && pluginConfig.gameNumber <= 9)){
+            NSInteger random = pluginConfig.gameNumber;
+            
+            [msgWrap setM_nsEmoticonMD5:[objc_getClass("GameController") getMD5ByGameContent:random]];
+            [msgWrap setM_uiGameContent:random];
+        }
+    }
+    
+    CHSuper2(CMessageMgr, AddEmoticonMsg, msg, MsgWrap, msgWrap);
+}
+
 CHConstructor{
     CHLoadLateClass(CMessageMgr);
     CHClassHook1(CMessageMgr, onRevokeMsg);
+    CHClassHook2(CMessageMgr, AddEmoticonMsg, MsgWrap);
 }

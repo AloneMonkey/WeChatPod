@@ -34,4 +34,10 @@ extern WeChatPluginConfig* pluginConfig;
  */
 @property(nonatomic, assign) BOOL enableRevoke;
 
+
+/**
+ 游戏作弊
+ */
+@property(nonatomic, assign) NSInteger gameNumber;
+
 @end

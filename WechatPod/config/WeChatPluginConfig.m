@@ -29,6 +29,7 @@ WeChatPluginConfig* pluginConfig = nil;
         _stepCount = 0;
         _location = CLLocationCoordinate2DMake(0, 0);
         _enableRevoke = YES;
+        _gameNumber = 0;
     }
     return self;
 }

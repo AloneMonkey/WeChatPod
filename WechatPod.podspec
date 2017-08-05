@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = "WechatPod"                        
-  spec.version          = "1.0.0"                                     
+  spec.version          = "2.0.0"                                     
   spec.summary          = "WechatPod for MonkeyDev"
   spec.description      = <<-DESC                                     
                           - WechatPod for MonkeyDev

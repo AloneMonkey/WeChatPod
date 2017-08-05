@@ -35,4 +35,16 @@
  */
 -(void)setEnableRevoke:(BOOL) enableRevoke;
 
+
+/**
+ 游戏作弊
+ 
+ @param gameNumber 设置的值
+ 1. 为剪刀
+ 2. 为石头
+ 3. 为布
+ 4~9 分别对应骰子的1~6
+ */
+-(void)setGameNumber:(NSInteger) gameNumber;
+
 @end
