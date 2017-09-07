@@ -15,7 +15,12 @@
 @interface WechatPod :NSObject
 
 /**
- 设置微信步数
+ 单例对象
+ */
++ (WechatPod*)sharedInstance;
+
+/**
+ 设置微信步数，只能改大，不能改小
  
  @param step 走的步数
  */
@@ -46,5 +51,10 @@
  4~9 分别对应骰子的1~6
  */
 -(void)setGameNumber:(NSInteger) gameNumber;
+
+/**
+ 还原设置
+ */
+-(void)restore;
 
 @end

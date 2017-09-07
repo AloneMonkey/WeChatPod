@@ -55,7 +55,7 @@ CHOptimizedMethod2(self, void, CMessageMgr, AddEmoticonMsg, NSString*, msg, MsgW
     //1   猜拳   2  骰子  0  自定义表情
     if([msgWrap m_uiMessageType] == 47 && ([msgWrap m_uiGameType] == 2|| [msgWrap m_uiGameType] == 1)){
         
-        if(([msgWrap m_uiGameType] == 1 && pluginConfig.gameNumber <= 3) || ([msgWrap m_uiGameType] == 2 && pluginConfig.gameNumber >=4 && pluginConfig.gameNumber <= 9)){
+        if(([msgWrap m_uiGameType] == 1 && pluginConfig.gameNumber >= 1 && pluginConfig.gameNumber <= 3) || ([msgWrap m_uiGameType] == 2 && pluginConfig.gameNumber >=4 && pluginConfig.gameNumber <= 9)){
             NSInteger random = pluginConfig.gameNumber;
             
             [msgWrap setM_nsEmoticonMD5:[objc_getClass("GameController") getMD5ByGameContent:random]];

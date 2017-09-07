@@ -15,6 +15,15 @@
 
 @implementation WechatPod
 
++(WechatPod *)sharedInstance{
+    static id sharedInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [self new];
+    });
+    return sharedInstance;
+}
+
 -(void)setStepCount:(NSInteger)step{
     [pluginConfig setStepCount:step];
 }
@@ -29,6 +38,13 @@
 
 -(void)setGameNumber:(NSInteger)gameNumber{
     [pluginConfig setGameNumber:gameNumber];
+}
+
+-(void)restore{
+    [pluginConfig setStepCount:0];
+    [pluginConfig setLocation:CLLocationCoordinate2DMake(0, 0)];
+    [pluginConfig setEnableRevoke:NO];
+    [pluginConfig setGameNumber:0];
 }
 
 @end
