@@ -10,7 +10,7 @@
  1. 修改定位
  */
 
-#import "CaptainHook.h"
+#import <CaptainHook/CaptainHook.h>
 #import "WeChatPluginConfig.h"
 #import <UIKit/UIKit.h>
 

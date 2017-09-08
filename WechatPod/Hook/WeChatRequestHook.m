@@ -10,7 +10,7 @@
      1. 修改bundle id
  */
 
-#import "CaptainHook.h"
+#import <CaptainHook/CaptainHook.h>
 #import <Foundation/Foundation.h>
 
 #pragma mark ManualAuthAesReqData

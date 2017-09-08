@@ -11,7 +11,7 @@
      2. 游戏作弊
  */
 
-#import "CaptainHook.h"
+#import <CaptainHook/CaptainHook.h>
 #import "WeChatHeader.h"
 #import "WeChatServiceManager.h"
 #import "WeChatPluginConfig.h"

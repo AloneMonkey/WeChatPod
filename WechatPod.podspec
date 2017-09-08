@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = "WechatPod"                        
-  spec.version          = "2.0.0"                                     
+  spec.version          = "3.0.0"                                     
   spec.summary          = "WechatPod for MonkeyDev"
   spec.description      = <<-DESC                                     
                           - WechatPod for MonkeyDev
@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => "https://github.com/AloneMonkey/WeChatPod.git", :tag => spec.version.to_s }  
   spec.source_files     = "WechatPod/**/*.{h,m}"   
   spec.public_header_files = "WechatPod/WechatPod.h"        
-  spec.requires_arc     = true                                       
+  spec.requires_arc     = true                  
+  spec.dependency 'CaptainHook'                    
   spec.pod_target_xcconfig = { "ONLY_ACTIVE_ARCH" => "No" }          
 end

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Coder. All rights reserved.
 //
 
-#import "CaptainHook.h"
+#import <CaptainHook/CaptainHook.h>
 #import "WeChatPluginConfig.h"
 
 WeChatPluginConfig* pluginConfig = nil;

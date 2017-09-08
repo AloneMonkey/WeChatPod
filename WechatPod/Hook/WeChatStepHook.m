@@ -11,7 +11,7 @@
  */
 
 
-#import "CaptainHook.h"
+#import <CaptainHook/CaptainHook.h>
 #import "WeChatPluginConfig.h"
 #import <Foundation/Foundation.h>
 

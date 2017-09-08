@@ -10,7 +10,7 @@
 
 #import "WechatPod.h"
 #import "WeChatPluginConfig.h"
-#import "CaptainHook.h"
+#import <CaptainHook/CaptainHook.h>
 #import <UIKit/UIKit.h>
 
 @implementation WechatPod
