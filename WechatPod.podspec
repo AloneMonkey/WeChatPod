@@ -17,5 +17,5 @@ Pod::Spec.new do |spec|
   spec.public_header_files = "WechatPod/WechatPod.h"        
   spec.requires_arc     = true                  
   spec.dependency 'CaptainHook'                    
-  spec.pod_target_xcconfig = { "ONLY_ACTIVE_ARCH" => "No" }          
+  spec.pod_target_xcconfig = { "ONLY_ACTIVE_ARCH" => "No" ,  'USER_HEADER_SEARCH_PATHS' => '/opt/MonkeyDev/include'}          
 end
