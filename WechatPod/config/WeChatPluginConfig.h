@@ -28,6 +28,15 @@ extern WeChatPluginConfig* pluginConfig;
  */
 @property(nonatomic, assign) CLLocationCoordinate2D location;
 
+/**
+ 经度
+ */
+@property(nonatomic, assign) double longitude;
+
+/**
+ 纬度
+ */
+@property(nonatomic, assign) double latitude;
 
 /**
  开启消息防撤回

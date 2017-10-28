@@ -34,6 +34,14 @@ WeChatPluginConfig* pluginConfig = nil;
     return self;
 }
 
+-(void)setLatitude:(double)latitude{
+    _location = CLLocationCoordinate2DMake(latitude, _location.longitude > 0 ? _location.longitude : 0);
+}
+
+-(void)setLongitude:(double)longitude{
+    _location = CLLocationCoordinate2DMake(_location.latitude > 0 ? _location.latitude : 0, longitude);
+}
+
 @end
 
 CHConstructor{
