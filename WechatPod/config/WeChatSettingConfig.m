@@ -10,7 +10,6 @@
 #import <CaptainHook/CaptainHook.h>
 #import "WeChatPluginConfig.h"
 #import <MDSettingCenter/MDSettingCenter.h>
-#import <MDMapView/MDMapView.h>
 
 #pragma mark NewMainFrameViewController
 
@@ -55,25 +54,25 @@ CHConstructor{
         pluginConfig.stepCount = textField.text.integerValue;
     };
     
-//    MDTextFieldData * longitudeData = [[MDTextFieldData alloc] init];
-//    longitudeData.title = @"经度";
-//    longitudeData.placeholder = @"设置经度";
-//    longitudeData.customCellBlock = ^(UITableViewCell *cell){
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    };
-//    longitudeData.textFieldBlock = ^(UITextField *textField) {
-//        pluginConfig.longitude = textField.text.doubleValue;
-//    };
-//
-//    MDTextFieldData * latitudeData = [[MDTextFieldData alloc] init];
-//    latitudeData.title = @"纬度";
-//    latitudeData.placeholder = @"设置纬度";
-//    latitudeData.customCellBlock = ^(UITableViewCell *cell){
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    };
-//    latitudeData.textFieldBlock = ^(UITextField *textField) {
-//        pluginConfig.latitude = textField.text.doubleValue;
-//    };
+    MDTextFieldData * longitudeData = [[MDTextFieldData alloc] init];
+    longitudeData.title = @"经度";
+    longitudeData.placeholder = @"设置经度";
+    longitudeData.customCellBlock = ^(UITableViewCell *cell){
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    };
+    longitudeData.textFieldBlock = ^(UITextField *textField) {
+        pluginConfig.longitude = textField.text.doubleValue;
+    };
+    
+    MDTextFieldData * latitudeData = [[MDTextFieldData alloc] init];
+    latitudeData.title = @"纬度";
+    latitudeData.placeholder = @"设置纬度";
+    latitudeData.customCellBlock = ^(UITableViewCell *cell){
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    };
+    latitudeData.textFieldBlock = ^(UITextField *textField) {
+        pluginConfig.latitude = textField.text.doubleValue;
+    };
     
     MDSegmentData* gameData = [[MDSegmentData alloc] init];
     gameData.title = @"游戏作弊";
@@ -97,25 +96,9 @@ CHConstructor{
         pluginConfig.gameNumber = (int)value + 3;
     };
     
-    NSArray* groupArr = @[switchData, stepData, gameData, gameNumberData];
+    NSArray* groupArr = @[switchData, stepData, longitudeData, latitudeData, gameData, gameNumberData];
     
-    MDTableViewGroup *group = [[MDTableViewGroup alloc] initWithTitle:@"WeChatPod" footer:nil cells:groupArr];
-    
-    MDLabelData* locationData = [[MDLabelData alloc] init];
-    locationData.title = @"我的位置";
-    locationData.customCellBlock = ^(UITableViewCell *cell){
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    };
-    locationData.selectCellBlock = ^{
-        MDMapViewController* mapViewController = [MDMapViewController new];
-        [settingViewController.navigationController pushViewController:mapViewController animated:YES];
-        mapViewController.locationBlock = ^(CLLocationCoordinate2D location) {
-            pluginConfig.location = location;
-        };
-    };
-    
-    MDTableViewGroup* locGroup = [[MDTableViewGroup alloc] initWithTitle:@"MDMapView" footer:@"by AloneMonkey" cells:@[locationData]];
+    MDTableViewGroup *group = [[MDTableViewGroup alloc] initWithTitle:@"WeChatPod" footer:@"by AloneMonkey" cells:groupArr];
     
     [settingViewController addTableViewGroup:group];
-    [settingViewController addTableViewGroup:locGroup];
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B9D6DBE8EB149D791816F24 /* Pods_WechatPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB114717956654BC6BB6BF9 /* Pods_WechatPod.framework */; };
 		8C4725961F30CB2C00682D12 /* WechatPod.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4725951F30CB2C00682D12 /* WechatPod.m */; };
 		8C4725981F30CB2C00682D12 /* WechatPod.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C47258F1F30CB2C00682D12 /* WechatPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C47261B1F30D3B800682D12 /* WeChatPluginConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4726191F30D3B800682D12 /* WeChatPluginConfig.h */; };
@@ -51,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CD09A431FA23B1600751286 /* MDSettingCenter.framework in Frameworks */,
+				2B9D6DBE8EB149D791816F24 /* Pods_WechatPod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,10 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C47259B1F30CB2C00682D12 /* Build configuration list for PBXNativeTarget "WechatPod" */;
 			buildPhases = (
+				CF15D1BD4AD87AB578F67DE3 /* [CP] Check Pods Manifest.lock */,
 				8C4725871F30CB2C00682D12 /* Sources */,
 				8C4725881F30CB2C00682D12 /* Frameworks */,
 				8C4725891F30CB2C00682D12 /* Headers */,
 				8C47258A1F30CB2C00682D12 /* Resources */,
+				35713F03A0031E8276C374A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +226,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35713F03A0031E8276C374A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WechatPod/Pods-WechatPod-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF15D1BD4AD87AB578F67DE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C4725871F30CB2C00682D12 /* Sources */ = {
