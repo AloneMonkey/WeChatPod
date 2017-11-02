@@ -16,6 +16,7 @@ Pod::Spec.new do |spec|
   spec.source_files     = "WechatPod/**/*.{h,m}"   
   spec.public_header_files = "WechatPod/WechatPod.h"        
   spec.requires_arc     = true                  
-  spec.dependency 'MDSettingCenter'                    
-  spec.pod_target_xcconfig = { "ONLY_ACTIVE_ARCH" => "No" ,  'USER_HEADER_SEARCH_PATHS' => '/opt/MonkeyDev/include'}          
+  spec.dependency 'MDSettingCenter' 
+  spec.dependency 'MDMapView'                    
+  spec.pod_target_xcconfig = { "ONLY_ACTIVE_ARCH" => "No" ,  "HEADER_SEARCH_PATHS" => "/opt/MonkeyDev/include"}          
 end
