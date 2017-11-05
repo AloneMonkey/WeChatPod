@@ -12,18 +12,17 @@
 
 
 #import <CaptainHook/CaptainHook.h>
-#import "WeChatPluginConfig.h"
+#import "WechatPodForm.h"
 #import <Foundation/Foundation.h>
+#import <CoreMotion/CoreMotion.h>
 
 typedef void (^CMStepQueryHandler)(NSInteger numberOfSteps, NSError *error);
 CMStepQueryHandler origHandler = nil;
 
 CMStepQueryHandler newHandler = ^(NSInteger numberSteps, NSError *error){
-    NSLog(@"获取到的步数  %lu", numberSteps);
-    if(pluginConfig.stepCount != 0){
-        numberSteps = pluginConfig.stepCount;
+    if(pluginConfig.step.integerValue != 0){
+        numberSteps = pluginConfig.step.integerValue;
     }
-    NSLog(@"修改后的步数  %lu", numberSteps);
     origHandler(numberSteps,error);
 };
 

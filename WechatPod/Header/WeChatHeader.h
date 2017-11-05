@@ -39,6 +39,8 @@
 
 - (void)AddLocalMsg:(NSString*)from MsgWrap:(CMessageWrap*) msgWrap;
 
+- (void)AddEmoticonMsg:(NSString*)from MsgWrap:(CMessageWrap*) msgWrap;
+
 @end
 
 @interface GameController : NSObject

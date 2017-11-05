@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C4725961F30CB2C00682D12 /* WechatPod.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4725951F30CB2C00682D12 /* WechatPod.m */; };
-		8C4725981F30CB2C00682D12 /* WechatPod.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C47258F1F30CB2C00682D12 /* WechatPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C47261B1F30D3B800682D12 /* WeChatPluginConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4726191F30D3B800682D12 /* WeChatPluginConfig.h */; };
-		8C47261C1F30D3B800682D12 /* WeChatPluginConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C47261A1F30D3B800682D12 /* WeChatPluginConfig.m */; };
 		8C47261F1F30D55200682D12 /* WeChatStepHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C47261E1F30D55200682D12 /* WeChatStepHook.m */; };
 		8C4726A91F31FFEC00682D12 /* WeChatLocationHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4726A81F31FFEC00682D12 /* WeChatLocationHook.m */; };
 		8C4726AB1F32070100682D12 /* WeChatMessageHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4726AA1F32070100682D12 /* WeChatMessageHook.m */; };
@@ -18,19 +14,16 @@
 		8C4726B21F32093200682D12 /* WeChatServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4726B01F32093200682D12 /* WeChatServiceManager.h */; };
 		8C4726B31F32093200682D12 /* WeChatServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4726B11F32093200682D12 /* WeChatServiceManager.m */; };
 		8C59083D1F35F4E800FDB363 /* WeChatRequestHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C59083C1F35F4E800FDB363 /* WeChatRequestHook.m */; };
-		8CD099F31FA2315B00751286 /* WeChatSettingConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CD099F11FA2315B00751286 /* WeChatSettingConfig.h */; };
-		8CD099F41FA2315B00751286 /* WeChatSettingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD099F21FA2315B00751286 /* WeChatSettingConfig.m */; };
+		8CA699931FAECA5F0035A8B3 /* WechatPodForm.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA699911FAECA5F0035A8B3 /* WechatPodForm.h */; };
+		8CA699941FAECA5F0035A8B3 /* WechatPodForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA699921FAECA5F0035A8B3 /* WechatPodForm.m */; };
+		8CA6999D1FAEFD8A0035A8B3 /* WechatMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6999C1FAEFC980035A8B3 /* WechatMapViewController.m */; };
 		8CD09A431FA23B1600751286 /* MDSettingCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD09A441FA23B1600751286 /* MDSettingCenter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1CFD6A41B377DE656EA15394 /* Pods-WechatPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatPod.release.xcconfig"; path = "Pods/Target Support Files/Pods-WechatPod/Pods-WechatPod.release.xcconfig"; sourceTree = "<group>"; };
 		8C47258C1F30CB2C00682D12 /* WechatPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WechatPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C47258F1F30CB2C00682D12 /* WechatPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WechatPod.h; sourceTree = "<group>"; };
-		8C4725951F30CB2C00682D12 /* WechatPod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WechatPod.m; sourceTree = "<group>"; };
 		8C4725971F30CB2C00682D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C4726191F30D3B800682D12 /* WeChatPluginConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatPluginConfig.h; sourceTree = "<group>"; };
-		8C47261A1F30D3B800682D12 /* WeChatPluginConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatPluginConfig.m; sourceTree = "<group>"; };
 		8C47261E1F30D55200682D12 /* WeChatStepHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatStepHook.m; sourceTree = "<group>"; };
 		8C4726A81F31FFEC00682D12 /* WeChatLocationHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatLocationHook.m; sourceTree = "<group>"; };
 		8C4726AA1F32070100682D12 /* WeChatMessageHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatMessageHook.m; sourceTree = "<group>"; };
@@ -38,8 +31,10 @@
 		8C4726B01F32093200682D12 /* WeChatServiceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatServiceManager.h; sourceTree = "<group>"; };
 		8C4726B11F32093200682D12 /* WeChatServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatServiceManager.m; sourceTree = "<group>"; };
 		8C59083C1F35F4E800FDB363 /* WeChatRequestHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatRequestHook.m; sourceTree = "<group>"; };
-		8CD099F11FA2315B00751286 /* WeChatSettingConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatSettingConfig.h; sourceTree = "<group>"; };
-		8CD099F21FA2315B00751286 /* WeChatSettingConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatSettingConfig.m; sourceTree = "<group>"; };
+		8CA699911FAECA5F0035A8B3 /* WechatPodForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WechatPodForm.h; sourceTree = "<group>"; };
+		8CA699921FAECA5F0035A8B3 /* WechatPodForm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WechatPodForm.m; sourceTree = "<group>"; };
+		8CA6999B1FAEFC980035A8B3 /* WechatMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WechatMapViewController.h; sourceTree = "<group>"; };
+		8CA6999C1FAEFC980035A8B3 /* WechatMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WechatMapViewController.m; sourceTree = "<group>"; };
 		8CD09A441FA23B1600751286 /* MDSettingCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MDSettingCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCBD82C0E04F26492A502C8 /* Pods-WechatPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatPod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WechatPod/Pods-WechatPod.debug.xcconfig"; sourceTree = "<group>"; };
 		EEB114717956654BC6BB6BF9 /* Pods_WechatPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WechatPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,26 +82,14 @@
 		8C47258E1F30CB2C00682D12 /* WechatPod */ = {
 			isa = PBXGroup;
 			children = (
+				8CA6999A1FAEFBFF0035A8B3 /* ViewController */,
+				8CA699901FAECA1F0035A8B3 /* Models */,
 				8C4726AF1F32090D00682D12 /* Manager */,
 				8C4726AC1F32078F00682D12 /* Header */,
 				8C47261D1F30D52F00682D12 /* Hook */,
-				8C4726181F30D39800682D12 /* config */,
-				8C47258F1F30CB2C00682D12 /* WechatPod.h */,
-				8C4725951F30CB2C00682D12 /* WechatPod.m */,
 				8C4725971F30CB2C00682D12 /* Info.plist */,
 			);
 			path = WechatPod;
-			sourceTree = "<group>";
-		};
-		8C4726181F30D39800682D12 /* config */ = {
-			isa = PBXGroup;
-			children = (
-				8C4726191F30D3B800682D12 /* WeChatPluginConfig.h */,
-				8C47261A1F30D3B800682D12 /* WeChatPluginConfig.m */,
-				8CD099F11FA2315B00751286 /* WeChatSettingConfig.h */,
-				8CD099F21FA2315B00751286 /* WeChatSettingConfig.m */,
-			);
-			path = config;
 			sourceTree = "<group>";
 		};
 		8C47261D1F30D52F00682D12 /* Hook */ = {
@@ -137,6 +120,24 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		8CA699901FAECA1F0035A8B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CA699911FAECA5F0035A8B3 /* WechatPodForm.h */,
+				8CA699921FAECA5F0035A8B3 /* WechatPodForm.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CA6999A1FAEFBFF0035A8B3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8CA6999B1FAEFC980035A8B3 /* WechatMapViewController.h */,
+				8CA6999C1FAEFC980035A8B3 /* WechatMapViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		8F2D94B2474EB77790289009 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,10 +154,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C4725981F30CB2C00682D12 /* WechatPod.h in Headers */,
-				8CD099F31FA2315B00751286 /* WeChatSettingConfig.h in Headers */,
+				8CA699931FAECA5F0035A8B3 /* WechatPodForm.h in Headers */,
 				8C4726AE1F3207A800682D12 /* WeChatHeader.h in Headers */,
-				8C47261B1F30D3B800682D12 /* WeChatPluginConfig.h in Headers */,
 				8C4726B21F32093200682D12 /* WeChatServiceManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,12 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CD099F41FA2315B00751286 /* WeChatSettingConfig.m in Sources */,
+				8CA6999D1FAEFD8A0035A8B3 /* WechatMapViewController.m in Sources */,
+				8CA699941FAECA5F0035A8B3 /* WechatPodForm.m in Sources */,
 				8C4726AB1F32070100682D12 /* WeChatMessageHook.m in Sources */,
 				8C47261F1F30D55200682D12 /* WeChatStepHook.m in Sources */,
 				8C4726A91F31FFEC00682D12 /* WeChatLocationHook.m in Sources */,
-				8C47261C1F30D3B800682D12 /* WeChatPluginConfig.m in Sources */,
-				8C4725961F30CB2C00682D12 /* WechatPod.m in Sources */,
 				8C59083D1F35F4E800FDB363 /* WeChatRequestHook.m in Sources */,
 				8C4726B31F32093200682D12 /* WeChatServiceManager.m in Sources */,
 			);
