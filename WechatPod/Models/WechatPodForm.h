@@ -31,9 +31,8 @@ typedef NS_OPTIONS(NSInteger, MorraType)
 @property (nonatomic, copy) NSString *step;
 @property (nonatomic, assign) MorraType morra;
 @property (nonatomic, assign) NSUInteger dice;
-@property (nonatomic, strong) CLLocation *location;
+@property (nonatomic, assign) CLLocationCoordinate2D location;
 
-- (CLLocationCoordinate2D)coordinate;
 - (NSUInteger) finalMorra;
 - (NSUInteger) finalDice;
 

@@ -7,6 +7,7 @@
 //
 
 #import "WechatMapViewController.h"
+#import "WechatPodForm.h"
 #import <MapKit/MapKit.h>
 
 @interface WechatMapViewController()<MKMapViewDelegate,UIGestureRecognizerDelegate>
@@ -55,8 +56,11 @@
         CLLocationCoordinate2D location = [_mapView convertPoint:point toCoordinateFromView:_mapView];
         [_mapPoint setCoordinate:location];
         [_mapView addAnnotation:_mapPoint];
-        self.field.value = [[CLLocation alloc] initWithLatitude:location.latitude
-                                                      longitude:location.longitude];
+        
+//        self.field.value    
+        
+        pluginConfig.location = location;
+        
         self.title = [NSString stringWithFormat:@"%0.3f, %0.3f",
                       location.latitude, location.longitude];
     }
@@ -92,7 +96,7 @@
 }
 
 -(void)clearAndExit{
-    self.field.value = [[CLLocation alloc] initWithLatitude:0 longitude:0];
+    pluginConfig.location = CLLocationCoordinate2DMake(0,0);
     [self back];
 }
 

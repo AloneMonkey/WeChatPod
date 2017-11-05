@@ -29,7 +29,7 @@ WechatPodForm* pluginConfig = nil;
     self = [super init];
     if (self) {
         _step = 0;
-        _location = [[CLLocation alloc] initWithLatitude:0 longitude:0];
+        _location = CLLocationCoordinate2DMake(0,0);
         _revoke = YES;
         _morra = 0;
         _dice = 6;
@@ -43,15 +43,6 @@ WechatPodForm* pluginConfig = nil;
 
 -(NSUInteger)finalDice{
     return _dice + 3;
-}
-
--(void)setLocation:(CLLocation *)location{
-    _location = location;
-    _coordinate = location.coordinate;
-}
-
--(CLLocationCoordinate2D)coordinate{
-    return _coordinate;
 }
 
 - (NSArray *)fields

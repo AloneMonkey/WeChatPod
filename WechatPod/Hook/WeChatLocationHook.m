@@ -18,8 +18,8 @@ CHDeclareClass(CLLocation);
 
 CHOptimizedMethod0(self, CLLocationCoordinate2D, CLLocation, coordinate){
     CLLocationCoordinate2D coordinate = CHSuper(0, CLLocation, coordinate);
-    if(pluginConfig.coordinate.longitude || pluginConfig.coordinate.latitude ){
-        coordinate = pluginConfig.coordinate;
+    if(pluginConfig.location.longitude || pluginConfig.location.latitude ){
+        coordinate = pluginConfig.location;
     }
     return coordinate;
 }
