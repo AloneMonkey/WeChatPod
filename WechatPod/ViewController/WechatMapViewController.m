@@ -8,6 +8,7 @@
 
 #import "WechatMapViewController.h"
 #import "WechatPodForm.h"
+#import "WeChatMapHelper.h"
 #import <MapKit/MapKit.h>
 
 @interface WechatMapViewController()<MKMapViewDelegate,UIGestureRecognizerDelegate>
@@ -16,6 +17,7 @@
 @property (nonatomic, strong) MKPointAnnotation* mapPoint;
 @property (nonatomic, strong) UIBarButtonItem* backButtonItem;
 @property (nonatomic, strong) UIBarButtonItem* closeButtonItem;
+@property (nonatomic, strong) WeChatMapHelper* mapHelper;
 
 @end
 
@@ -26,6 +28,7 @@
     self = [super init];
     if (self) {
         _mapPoint = [[MKPointAnnotation alloc] init];
+        _mapView = [WeChatMapHelper sharedInstance];
     }
     return self;
 }
@@ -55,14 +58,19 @@
         CGPoint point = [gesture locationInView:_mapView];
         CLLocationCoordinate2D location = [_mapView convertPoint:point toCoordinateFromView:_mapView];
         [_mapPoint setCoordinate:location];
+        
+        _mapPoint.title = @"经纬度";
+        _mapPoint.subtitle = [NSString stringWithFormat:@"%0.3f, %0.3f",
+                              location.latitude, location.longitude];;
+        
         [_mapView addAnnotation:_mapPoint];
-        
-//        self.field.value    
-        
+
         pluginConfig.location = location;
-        
-        self.title = [NSString stringWithFormat:@"%0.3f, %0.3f",
-                      location.latitude, location.longitude];
+
+        /// 反地理坐标 来查询位置
+        [WeChatMapHelper decodeLocation:location completionHandler:^(NSString *name, NSString *detial) {
+            self.title = [NSString stringWithFormat:@"%@ %@", name, detial];
+        }];
     }
 }
 
