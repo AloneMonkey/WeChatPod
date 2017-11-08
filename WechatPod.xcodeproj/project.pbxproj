@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75B3E9B31FB2A21000E30DBE /* WeChatMapHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B3E9B11FB2A21000E30DBE /* WeChatMapHelper.h */; };
+		75B3E9B41FB2A21000E30DBE /* WeChatMapHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B3E9B21FB2A21000E30DBE /* WeChatMapHelper.m */; };
 		8C47261F1F30D55200682D12 /* WeChatStepHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C47261E1F30D55200682D12 /* WeChatStepHook.m */; };
 		8C4726A91F31FFEC00682D12 /* WeChatLocationHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4726A81F31FFEC00682D12 /* WeChatLocationHook.m */; };
 		8C4726AB1F32070100682D12 /* WeChatMessageHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4726AA1F32070100682D12 /* WeChatMessageHook.m */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		1CFD6A41B377DE656EA15394 /* Pods-WechatPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WechatPod.release.xcconfig"; path = "Pods/Target Support Files/Pods-WechatPod/Pods-WechatPod.release.xcconfig"; sourceTree = "<group>"; };
+		75B3E9B11FB2A21000E30DBE /* WeChatMapHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatMapHelper.h; sourceTree = "<group>"; };
+		75B3E9B21FB2A21000E30DBE /* WeChatMapHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatMapHelper.m; sourceTree = "<group>"; };
 		8C47258C1F30CB2C00682D12 /* WechatPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WechatPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4725971F30CB2C00682D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C47261E1F30D55200682D12 /* WeChatStepHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatStepHook.m; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				8CA6999B1FAEFC980035A8B3 /* WechatMapViewController.h */,
 				8CA6999C1FAEFC980035A8B3 /* WechatMapViewController.m */,
+				75B3E9B11FB2A21000E30DBE /* WeChatMapHelper.h */,
+				75B3E9B21FB2A21000E30DBE /* WeChatMapHelper.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CA699931FAECA5F0035A8B3 /* WechatPodForm.h in Headers */,
+				75B3E9B31FB2A21000E30DBE /* WeChatMapHelper.h in Headers */,
 				8C4726AE1F3207A800682D12 /* WeChatHeader.h in Headers */,
 				8C4726B21F32093200682D12 /* WeChatServiceManager.h in Headers */,
 			);
@@ -192,6 +199,7 @@
 				TargetAttributes = {
 					8C47258B1F30CB2C00682D12 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0910;
 					};
 				};
 			};
@@ -233,6 +241,7 @@
 				8C47261F1F30D55200682D12 /* WeChatStepHook.m in Sources */,
 				8C4726A91F31FFEC00682D12 /* WeChatLocationHook.m in Sources */,
 				8C59083D1F35F4E800FDB363 /* WeChatRequestHook.m in Sources */,
+				75B3E9B41FB2A21000E30DBE /* WeChatMapHelper.m in Sources */,
 				8C4726B31F32093200682D12 /* WeChatServiceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FCBD82C0E04F26492A502C8 /* Pods-WechatPod.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9XQEPG2J2J;
@@ -369,6 +379,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alonemonkey.WechatPod;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "";
 			};
@@ -378,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CFD6A41B377DE656EA15394 /* Pods-WechatPod.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9XQEPG2J2J;
@@ -397,6 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alonemonkey.WechatPod;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "";
 			};

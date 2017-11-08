@@ -52,7 +52,7 @@ WechatPodForm* pluginConfig = nil;
                FXFormFieldTitle: @"防撤回"
                },
              @{FXFormFieldKey: @"step",
-               FXFormFieldType: FXFormFieldTypeInteger,
+               FXFormFieldType: FXFormFieldTypePhone,
                FXFormFieldTitle: @"微信步数"
                },
              @{FXFormFieldKey: @"morra",
